@@ -1,0 +1,17 @@
+2023-12-12 10:36:27.961 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7246/api/Course/add application/json 45
+2023-12-12 10:36:27.964 +05:30 [INF] CORS policy execution successful.
+2023-12-12 10:36:27.964 +05:30 [INF] Executing endpoint 'WebApi.Controllers.CourseController.AddCourse (WebApi)'
+2023-12-12 10:36:27.967 +05:30 [INF] Route matched with {action = "AddCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddCourse(Application.DTOs.CourseDTOs.AddCourseDTO) on controller WebApi.Controllers.CourseController (WebApi).
+2023-12-12 10:36:27.998 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentID], [s].[AgeGroupCount], [s].[CreatedBy], [s].[CreatedDate], [s].[IsActive], [s].[LastModifiedBy], [s].[LastModifiedDate], [s].[StudentAddress], [s].[StudentAge], [s].[StudentCity], [s].[StudentCountry], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2023-12-12 10:36:28.086 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([CourseFee], [CourseName], [CreatedBy], [CreatedDate], [IsActive], [LastModifiedBy], [LastModifiedDate], [StudentID])
+OUTPUT INSERTED.[CourseId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-12-12 10:36:28.103 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Entities.Course'.
+2023-12-12 10:36:28.103 +05:30 [INF] Executed action WebApi.Controllers.CourseController.AddCourse (WebApi) in 135.7954ms
+2023-12-12 10:36:28.103 +05:30 [INF] Executed endpoint 'WebApi.Controllers.CourseController.AddCourse (WebApi)'
+2023-12-12 10:36:28.103 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7246/api/Course/add application/json 45 - 200 - application/json;+charset=utf-8 142.4676ms

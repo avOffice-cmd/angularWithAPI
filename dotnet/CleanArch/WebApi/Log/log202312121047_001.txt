@@ -1,0 +1,60 @@
+2023-12-12 10:47:20.539 +05:30 [INF] Executed DbCommand (238ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [Dotned_assessment2222];
+2023-12-12 10:47:20.640 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [Dotned_assessment2222] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-12-12 10:47:20.655 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-12 10:47:20.724 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-12-12 10:47:20.725 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-12 10:47:20.744 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-12-12 10:47:20.753 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-12-12 10:47:20.767 +05:30 [INF] Applying migration '20231212051532_create database'.
+2023-12-12 10:47:20.798 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Students] (
+    [StudentID] int NOT NULL IDENTITY,
+    [StudentName] nvarchar(max) NOT NULL,
+    [StudentAge] nvarchar(max) NOT NULL,
+    [StudentEmail] nvarchar(max) NOT NULL,
+    [StudentAddress] nvarchar(max) NOT NULL,
+    [StudentCity] nvarchar(max) NOT NULL,
+    [AgeGroupCount] nvarchar(max) NOT NULL,
+    [StudentCountry] nvarchar(max) NOT NULL,
+    [CreatedDate] datetime2 NULL,
+    [LastModifiedDate] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [LastModifiedBy] nvarchar(max) NULL,
+    [IsActive] bit NOT NULL,
+    CONSTRAINT [PK_Students] PRIMARY KEY ([StudentID])
+);
+2023-12-12 10:47:20.800 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Courses] (
+    [CourseId] int NOT NULL IDENTITY,
+    [CourseName] nvarchar(max) NOT NULL,
+    [CourseFee] int NOT NULL,
+    [StudentID] int NOT NULL,
+    [CreatedDate] datetime2 NULL,
+    [LastModifiedDate] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [LastModifiedBy] nvarchar(max) NULL,
+    [IsActive] bit NOT NULL,
+    CONSTRAINT [PK_Courses] PRIMARY KEY ([CourseId]),
+    CONSTRAINT [FK_Courses_Students_StudentID] FOREIGN KEY ([StudentID]) REFERENCES [Students] ([StudentID]) ON DELETE CASCADE
+);
+2023-12-12 10:47:20.801 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Courses_StudentID] ON [Courses] ([StudentID]);
+2023-12-12 10:47:21.311 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231212051532_create database', N'7.0.14');

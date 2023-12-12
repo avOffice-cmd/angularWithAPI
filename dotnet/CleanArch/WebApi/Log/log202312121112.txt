@@ -1,0 +1,14 @@
+2023-12-12 11:12:44.873 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7246/api/Student/update - -
+2023-12-12 11:12:44.875 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:12:44.876 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7246/api/Student/update - - - 204 - - 3.1373ms
+2023-12-12 11:12:44.877 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7246/api/Student/update application/json 163
+2023-12-12 11:12:44.878 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:12:44.878 +05:30 [INF] Executing endpoint 'WebApi.Controllers.StudentController.UpdateStudent (WebApi)'
+2023-12-12 11:12:44.880 +05:30 [INF] Route matched with {action = "UpdateStudent", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] UpdateStudent(Application.DTOs.StudentDTOs.UpdateStudentDTO) on controller WebApi.Controllers.StudentController (WebApi).
+2023-12-12 11:12:44.897 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentID], [s].[AgeGroupCount], [s].[CreatedBy], [s].[CreatedDate], [s].[IsActive], [s].[LastModifiedBy], [s].[LastModifiedDate], [s].[StudentAddress], [s].[StudentAge], [s].[StudentCity], [s].[StudentCountry], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2023-12-12 11:12:44.898 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-12-12 11:12:44.898 +05:30 [INF] Executed action WebApi.Controllers.StudentController.UpdateStudent (WebApi) in 15.1749ms
+2023-12-12 11:12:44.898 +05:30 [INF] Executed endpoint 'WebApi.Controllers.StudentController.UpdateStudent (WebApi)'
+2023-12-12 11:12:44.898 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7246/api/Student/update application/json 163 - 200 - text/plain;+charset=utf-8 20.6330ms

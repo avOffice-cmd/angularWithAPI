@@ -1,0 +1,24 @@
+2023-12-12 10:30:13.847 +05:30 [INF] Now listening on: https://localhost:7246
+2023-12-12 10:30:13.865 +05:30 [INF] Now listening on: http://localhost:5204
+2023-12-12 10:30:13.868 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-12 10:30:13.869 +05:30 [INF] Hosting environment: Development
+2023-12-12 10:30:13.869 +05:30 [INF] Content root path: D:\DayUsers\AanchalVerma\Personal\cleanArchitectureWithAutoMapper\CleanArch\WebApi
+2023-12-12 10:30:14.390 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/index.html - -
+2023-12-12 10:30:14.621 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/index.html - - - 200 - text/html;charset=utf-8 234.6757ms
+2023-12-12 10:30:14.630 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7246/_vs/browserLink - -
+2023-12-12 10:30:14.630 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - -
+2023-12-12 10:30:14.638 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - - - 200 12344 application/javascript;+charset=utf-8 7.3304ms
+2023-12-12 10:30:14.643 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7246/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.3677ms
+2023-12-12 10:30:14.729 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - -
+2023-12-12 10:30:14.826 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 96.9783ms
+2023-12-12 10:30:22.635 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7246/api/Student/delete/1 - -
+2023-12-12 10:30:22.642 +05:30 [INF] CORS policy execution successful.
+2023-12-12 10:30:22.646 +05:30 [INF] Executing endpoint 'WebApi.Controllers.StudentController.DeleteStudentByIDAsync (WebApi)'
+2023-12-12 10:30:22.669 +05:30 [INF] Route matched with {action = "DeleteStudentByID", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteStudentByIDAsync(Int32) on controller WebApi.Controllers.StudentController (WebApi).
+2023-12-12 10:30:23.528 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentID], [s].[AgeGroupCount], [s].[CreatedBy], [s].[CreatedDate], [s].[IsActive], [s].[LastModifiedBy], [s].[LastModifiedDate], [s].[StudentAddress], [s].[StudentAge], [s].[StudentCity], [s].[StudentCountry], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2023-12-12 10:30:23.664 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-12-12 10:30:23.667 +05:30 [INF] Executed action WebApi.Controllers.StudentController.DeleteStudentByIDAsync (WebApi) in 995.7493ms
+2023-12-12 10:30:23.668 +05:30 [INF] Executed endpoint 'WebApi.Controllers.StudentController.DeleteStudentByIDAsync (WebApi)'
+2023-12-12 10:30:23.673 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7246/api/Student/delete/1 - - - 200 - text/plain;+charset=utf-8 1037.5727ms

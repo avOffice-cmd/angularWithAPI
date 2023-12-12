@@ -1,0 +1,27 @@
+2023-12-12 11:05:44.608 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Course/getall - -
+2023-12-12 11:05:44.615 +05:30 [INF] Executing endpoint 'WebApi.Controllers.CourseController.GetAllCourses (WebApi)'
+2023-12-12 11:05:44.619 +05:30 [INF] Route matched with {action = "GetAllCourses", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllCourses() on controller WebApi.Controllers.CourseController (WebApi).
+2023-12-12 11:05:44.633 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[CourseFee], [c].[CourseName], [c].[CreatedBy], [c].[CreatedDate], [c].[IsActive], [c].[LastModifiedBy], [c].[LastModifiedDate], [c].[StudentID]
+FROM [Courses] AS [c]
+2023-12-12 11:05:44.635 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.CourseDTOs.ShowCourseDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 11:05:44.636 +05:30 [INF] Executed action WebApi.Controllers.CourseController.GetAllCourses (WebApi) in 16.9846ms
+2023-12-12 11:05:44.636 +05:30 [INF] Executed endpoint 'WebApi.Controllers.CourseController.GetAllCourses (WebApi)'
+2023-12-12 11:05:44.636 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Course/getall - - - 200 - application/json;+charset=utf-8 27.9342ms
+2023-12-12 11:05:56.721 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7246/api/Course/add application/json 45
+2023-12-12 11:05:56.722 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:05:56.722 +05:30 [INF] Executing endpoint 'WebApi.Controllers.CourseController.AddCourse (WebApi)'
+2023-12-12 11:05:56.725 +05:30 [INF] Route matched with {action = "AddCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddCourse(Application.DTOs.CourseDTOs.AddCourseDTO) on controller WebApi.Controllers.CourseController (WebApi).
+2023-12-12 11:05:56.739 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentID], [s].[AgeGroupCount], [s].[CreatedBy], [s].[CreatedDate], [s].[IsActive], [s].[LastModifiedBy], [s].[LastModifiedDate], [s].[StudentAddress], [s].[StudentAge], [s].[StudentCity], [s].[StudentCountry], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2023-12-12 11:05:56.765 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([CourseFee], [CourseName], [CreatedBy], [CreatedDate], [IsActive], [LastModifiedBy], [LastModifiedDate], [StudentID])
+OUTPUT INSERTED.[CourseId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-12-12 11:05:56.769 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Entities.Course'.
+2023-12-12 11:05:56.770 +05:30 [INF] Executed action WebApi.Controllers.CourseController.AddCourse (WebApi) in 44.4924ms
+2023-12-12 11:05:56.770 +05:30 [INF] Executed endpoint 'WebApi.Controllers.CourseController.AddCourse (WebApi)'
+2023-12-12 11:05:56.770 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7246/api/Course/add application/json 45 - 200 - application/json;+charset=utf-8 48.7268ms

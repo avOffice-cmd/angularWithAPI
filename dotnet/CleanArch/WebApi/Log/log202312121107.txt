@@ -1,0 +1,21 @@
+2023-12-12 11:07:05.440 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7246/api/Course/delete/1 - -
+2023-12-12 11:07:05.442 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:07:05.442 +05:30 [INF] Executing endpoint 'WebApi.Controllers.CourseController.DeleteCourseByID (WebApi)'
+2023-12-12 11:07:05.445 +05:30 [INF] Route matched with {action = "DeleteCourseByID", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteCourseByID(Int32) on controller WebApi.Controllers.CourseController (WebApi).
+2023-12-12 11:07:05.450 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[CourseFee], [c].[CourseName], [c].[CreatedBy], [c].[CreatedDate], [c].[IsActive], [c].[LastModifiedBy], [c].[LastModifiedDate], [c].[StudentID]
+FROM [Courses] AS [c]
+2023-12-12 11:07:05.453 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-12-12 11:07:05.453 +05:30 [INF] Executed action WebApi.Controllers.CourseController.DeleteCourseByID (WebApi) in 7.598ms
+2023-12-12 11:07:05.453 +05:30 [INF] Executed endpoint 'WebApi.Controllers.CourseController.DeleteCourseByID (WebApi)'
+2023-12-12 11:07:05.453 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7246/api/Course/delete/1 - - - 200 - text/plain;+charset=utf-8 13.4995ms
+2023-12-12 11:07:10.925 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Course/getall - -
+2023-12-12 11:07:10.926 +05:30 [INF] Executing endpoint 'WebApi.Controllers.CourseController.GetAllCourses (WebApi)'
+2023-12-12 11:07:10.926 +05:30 [INF] Route matched with {action = "GetAllCourses", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllCourses() on controller WebApi.Controllers.CourseController (WebApi).
+2023-12-12 11:07:10.927 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[CourseFee], [c].[CourseName], [c].[CreatedBy], [c].[CreatedDate], [c].[IsActive], [c].[LastModifiedBy], [c].[LastModifiedDate], [c].[StudentID]
+FROM [Courses] AS [c]
+2023-12-12 11:07:10.927 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.CourseDTOs.ShowCourseDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 11:07:10.927 +05:30 [INF] Executed action WebApi.Controllers.CourseController.GetAllCourses (WebApi) in 1.4675ms
+2023-12-12 11:07:10.927 +05:30 [INF] Executed endpoint 'WebApi.Controllers.CourseController.GetAllCourses (WebApi)'
+2023-12-12 11:07:10.927 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Course/getall - - - 200 - application/json;+charset=utf-8 1.9223ms

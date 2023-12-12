@@ -1,0 +1,38 @@
+
+<h2>UPDATE STUDENT</h2>
+
+
+<div>
+    
+    <label for="studentID">Student ID:</label>
+    <input type="text" #studentIDinp >
+  
+    <label for="studentName">Student Name:</label>
+    <input type="text" #studentNameinp >
+  
+    <label for="studentAge">Student Age:</label>
+    <input type="text" #studentAgeinp >
+  
+    <label for="studentEmail">Student Email:</label>
+    <input type="text" #studentEmailinp >
+
+    <label for="studentAddress">student Address:</label>
+    <input type="text" #studentAddressinp >
+    
+    <label for="ageGroupCount">ageGroupCount:</label>
+    <input type="text" #ageGroupCountinp >
+  
+    <label for="studentCity">student City:</label>
+    <input type="text" #studentCityinp >
+
+    <label for="studentCountry">studen tCountry:</label>
+    <input type="text" #studentCountryinp >
+    <button (click)="updateStudent(
+                    +studentIDinp.value,studentNameinp.value,
+                    studentAgeinp.value,studentEmailinp.value,
+                    studentAddressinp.value,ageGroupCountinp.value,
+                    studentCityinp.value,studentCountryinp.value)" >
+    Update Student
+  </button>
+  </div>
+  

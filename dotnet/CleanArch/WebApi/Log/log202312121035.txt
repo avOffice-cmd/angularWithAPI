@@ -1,0 +1,20 @@
+2023-12-12 10:35:39.417 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Course/getall - -
+2023-12-12 10:35:39.423 +05:30 [INF] Executing endpoint 'WebApi.Controllers.CourseController.GetAllCourses (WebApi)'
+2023-12-12 10:35:39.426 +05:30 [INF] Route matched with {action = "GetAllCourses", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllCourses() on controller WebApi.Controllers.CourseController (WebApi).
+2023-12-12 10:35:39.449 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[CourseFee], [c].[CourseName], [c].[CreatedBy], [c].[CreatedDate], [c].[IsActive], [c].[LastModifiedBy], [c].[LastModifiedDate], [c].[StudentID]
+FROM [Courses] AS [c]
+2023-12-12 10:35:39.466 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.CourseDTOs.ShowCourseDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 10:35:39.477 +05:30 [INF] Executed action WebApi.Controllers.CourseController.GetAllCourses (WebApi) in 50.4458ms
+2023-12-12 10:35:39.477 +05:30 [INF] Executed endpoint 'WebApi.Controllers.CourseController.GetAllCourses (WebApi)'
+2023-12-12 10:35:39.477 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Course/getall - - - 200 - application/json;+charset=utf-8 60.4381ms
+2023-12-12 10:35:54.221 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Course/GetCourseByID?courseID=1 - -
+2023-12-12 10:35:54.224 +05:30 [INF] Executing endpoint 'WebApi.Controllers.CourseController.GetCourseByID (WebApi)'
+2023-12-12 10:35:54.227 +05:30 [INF] Route matched with {action = "GetCourseByID", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetCourseByID(Int32) on controller WebApi.Controllers.CourseController (WebApi).
+2023-12-12 10:35:54.236 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[CourseFee], [c].[CourseName], [c].[CreatedBy], [c].[CreatedDate], [c].[IsActive], [c].[LastModifiedBy], [c].[LastModifiedDate], [c].[StudentID]
+FROM [Courses] AS [c]
+2023-12-12 10:35:54.237 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Entities.Course'.
+2023-12-12 10:35:54.241 +05:30 [INF] Executed action WebApi.Controllers.CourseController.GetCourseByID (WebApi) in 13.4218ms
+2023-12-12 10:35:54.241 +05:30 [INF] Executed endpoint 'WebApi.Controllers.CourseController.GetCourseByID (WebApi)'
+2023-12-12 10:35:54.241 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Course/GetCourseByID?courseID=1 - - - 200 - application/json;+charset=utf-8 19.6180ms

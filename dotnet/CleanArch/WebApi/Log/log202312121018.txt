@@ -1,0 +1,22 @@
+2023-12-12 10:18:28.071 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7246/api/Course/update application/json 63
+2023-12-12 10:18:28.075 +05:30 [INF] CORS policy execution successful.
+2023-12-12 10:18:28.075 +05:30 [INF] Executing endpoint 'WebApi.Controllers.CourseController.UpdateCourse (WebApi)'
+2023-12-12 10:18:28.075 +05:30 [INF] Route matched with {action = "UpdateCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] UpdateCourse(Application.DTOs.CourseDTOs.UpdateCourseDTO) on controller WebApi.Controllers.CourseController (WebApi).
+2023-12-12 10:18:28.090 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[CourseFee], [c].[CourseName], [c].[CreatedBy], [c].[CreatedDate], [c].[IsActive], [c].[LastModifiedBy], [c].[LastModifiedDate], [c].[StudentID]
+FROM [Courses] AS [c]
+2023-12-12 10:18:28.092 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-12-12 10:18:28.092 +05:30 [INF] Executed action WebApi.Controllers.CourseController.UpdateCourse (WebApi) in 17.4292ms
+2023-12-12 10:18:28.093 +05:30 [INF] Executed endpoint 'WebApi.Controllers.CourseController.UpdateCourse (WebApi)'
+2023-12-12 10:18:28.093 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7246/api/Course/update application/json 63 - 200 - text/plain;+charset=utf-8 21.9061ms
+2023-12-12 10:18:56.716 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7246/api/Student/delete/1 - -
+2023-12-12 10:18:56.716 +05:30 [INF] CORS policy execution successful.
+2023-12-12 10:18:56.716 +05:30 [INF] Executing endpoint 'WebApi.Controllers.StudentController.DeleteStudentByIDAsync (WebApi)'
+2023-12-12 10:18:56.720 +05:30 [INF] Route matched with {action = "DeleteStudentByID", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteStudentByIDAsync(Int32) on controller WebApi.Controllers.StudentController (WebApi).
+2023-12-12 10:18:56.811 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentID], [s].[AgeGroupCount], [s].[CreatedBy], [s].[CreatedDate], [s].[IsActive], [s].[LastModifiedBy], [s].[LastModifiedDate], [s].[StudentAddress], [s].[StudentAge], [s].[StudentCity], [s].[StudentCountry], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2023-12-12 10:18:56.849 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-12-12 10:18:56.849 +05:30 [INF] Executed action WebApi.Controllers.StudentController.DeleteStudentByIDAsync (WebApi) in 129.2445ms
+2023-12-12 10:18:56.849 +05:30 [INF] Executed endpoint 'WebApi.Controllers.StudentController.DeleteStudentByIDAsync (WebApi)'
+2023-12-12 10:18:56.849 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7246/api/Student/delete/1 - - - 200 - text/plain;+charset=utf-8 133.2705ms

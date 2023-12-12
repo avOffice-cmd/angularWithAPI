@@ -1,0 +1,60 @@
+<!-- app.component.html -->
+
+<!-- <h1>{{ title }}</h1> -->
+
+<button (click)="show();" >Show std</button>
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Full Name</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>CreatedDetails</th>
+      <th>LastModifiedBy</th>
+      <th>LastModifiedDate</th>
+      <th>IsActive</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.studentID }}</td>
+      <td>{{ student.studentName }}</td>
+      <td>{{ student.studentAge }}</td>
+      <td>{{ student.studentEmail }}</td>
+      <td>{{ student.createdDetails }}</td>
+      <td>{{ student.lastModifiedDate }}</td>
+      <td>{{ student.lastModifiedBy }}</td>
+      <td>{{ student.isActive }}</td> 
+
+    </tr>
+  </tbody>
+</table>
+
+
+<H2>ADD STUDENT</H2>
+<div>
+  <label for="fullName">Full Name:</label>
+  <input type="text" id="fullName" #nameInp>
+
+  <label for="age">Age:</label>
+  <input type="number" id="age" #ageInp>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" #emailInp>
+
+  <label for="address">Address:</label>
+  <input type="text" id="address" #addressInp>
+
+  <label for="cityOrCountry">City or Country:</label>
+  <input type="text" id="cityOrCountry" #cityOrCountryInp>
+
+  <button (click)="addStudent(
+    nameInp.value,ageInp.value,emailInp.value,addressInp.value,cityOrCountryInp.value)" >
+    Add Student
+  </button>
+</div>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,10 @@
+2023-12-12 17:28:51.683 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Student/getall - -
+2023-12-12 17:28:51.686 +05:30 [INF] Executing endpoint 'WebApi.Controllers.StudentController.GetAllStudents (WebApi)'
+2023-12-12 17:28:51.686 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllStudents() on controller WebApi.Controllers.StudentController (WebApi).
+2023-12-12 17:28:51.694 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentID], [s].[AgeGroupCount], [s].[CreatedBy], [s].[CreatedDate], [s].[IsActive], [s].[LastModifiedBy], [s].[LastModifiedDate], [s].[StudentAddress], [s].[StudentAge], [s].[StudentCity], [s].[StudentCountry], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2023-12-12 17:28:51.694 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.StudentDTOs.ShowStudentDTO, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 17:28:51.695 +05:30 [INF] Executed action WebApi.Controllers.StudentController.GetAllStudents (WebApi) in 8.8438ms
+2023-12-12 17:28:51.695 +05:30 [INF] Executed endpoint 'WebApi.Controllers.StudentController.GetAllStudents (WebApi)'
+2023-12-12 17:28:51.695 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Student/getall - - - 200 - application/json;+charset=utf-8 11.6438ms

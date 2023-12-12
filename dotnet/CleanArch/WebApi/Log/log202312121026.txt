@@ -1,0 +1,4 @@
+2023-12-12 10:26:44.381 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-12-12 10:26:44.392 +05:30 [INF] Executed action WebApi.Controllers.StudentController.DeleteStudentByIDAsync (WebApi) in 119826.0658ms
+2023-12-12 10:26:44.393 +05:30 [INF] Executed endpoint 'WebApi.Controllers.StudentController.DeleteStudentByIDAsync (WebApi)'
+2023-12-12 10:26:44.401 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7246/api/Student/delete/1 - - - 200 - text/plain;+charset=utf-8 119879.6456ms
